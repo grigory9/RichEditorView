@@ -47,8 +47,7 @@ import UIKit
     /// Input accessory view to display over they keyboard.
     /// Defaults to nil
     open override var inputAccessoryView: UIView? {
-        get { return webView.cjw_inputAccessoryView }
-        set { webView.cjw_inputAccessoryView = newValue }
+		webView.inputAccessoryView
     }
 
     /// The internal UIWebView that is used to display the text.
@@ -149,9 +148,7 @@ import UIKit
         webView.scrollView.bounces = false
         webView.scrollView.delegate = self
         webView.scrollView.clipsToBounds = false
-        
-        webView.cjw_inputAccessoryView = nil
-        
+                
         self.addSubview(webView)
         
         if let filePath = Bundle(for: RichEditorView.self).path(forResource: "rich_editor", ofType: "html") {

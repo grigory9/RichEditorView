@@ -1,4 +1,5 @@
-// swift-tools-version:5.1// This comment is necessary, and every Package.swift file
+// swift-tools-version:5.3
+// This comment is necessary, and every Package.swift file
 // must start with it.
 // It tells SPM which version to use.
 // It doesn't have to be the same version as your code,
@@ -7,24 +8,19 @@
 import PackageDescription
 
 let package = Package(
-	name: "RichTextEditor",
+	name: "RichEditorView",
 	platforms: [
-		.iOS(.v11),
+		.iOS(.v14),
 	],
 	products: [
-		.library(name: "RichTextEditor", targets: ["RichTextEditor"])
+		.library(name: "RichEditorView", targets: ["RichEditorView"])
 	],
 	dependencies: [],
 	targets: [
 		.target(
-			name: "RichTextEditor",
+			name: "RichEditorView",
 			dependencies: [],
-			path: "RichTextEditor/RichTextEditor"
-		),
-		.testTarget(
-			name: "RichTextEditorTests",
-			dependencies: ["RichTextEditor"],
-			path: "RichTextEditor/RichTextEditorTests"
+			path: "RichEditorView"
 		)
 	]
 )
